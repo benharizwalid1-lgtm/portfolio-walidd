@@ -1,0 +1,120 @@
+{
+  "profile": {
+    "name": "Walid",
+    "title": "Développeur Web Junior",
+    "location": "France",
+    "email": "walid@example.com",
+    "linkedin": "https://linkedin.com/in/walid",
+    "github": "https://github.com/walid"
+  },
+  "bio": {
+    "serious": "Développeur web junior passionné par la création de solutions digitales performantes et évolutives. Rigoureux, méthodique et orienté résultats, je m'engage à livrer un code de qualité qui répond aux besoins métier.",
+    "playful": "Je suis ce genre de développeur qui transforme le café en lignes de code et les problèmes complexes en solutions élégantes. J'aime casser les choses pour mieux les reconstruire, et je crois que chaque bug est une opportunité déguisée."
+  },
+  "values": [
+    {
+      "name": "Curiosité",
+      "serious": "Une veille technologique constante pour rester à la pointe des innovations.",
+      "playful": "Je suis ce développeur qui lit la documentation... pour le plaisir."
+    },
+    {
+      "name": "Adaptabilité",
+      "serious": "Capacité à m'intégrer rapidement dans différents environnements et technologies.",
+      "playful": "Nouveau framework ? Nouveau défi ? Je suis partant !"
+    },
+    {
+      "name": "Qualité",
+      "serious": "Un engagement envers l'excellence technique et les bonnes pratiques.",
+      "playful": "Le code propre, c'est comme ranger sa chambre : on se sent mieux après."
+    }
+  ],
+  "skills": [
+    {
+      "name": "React",
+      "category": "Frontend",
+      "level": 80,
+      "serious": "Maîtrise du framework React pour le développement d'interfaces utilisateur modernes et réactives.",
+      "playful": "React et moi, c'est une belle histoire d'amour. Hooks, Context, tout le package !"
+    },
+    {
+      "name": "TypeScript",
+      "category": "Frontend",
+      "level": 75,
+      "serious": "Utilisation de TypeScript pour un code robuste et maintenable.",
+      "playful": "Parce que les erreurs à la compilation, c'est toujours mieux qu'en production."
+    },
+    {
+      "name": "Node.js",
+      "category": "Backend",
+      "level": 70,
+      "serious": "Développement d'APIs RESTful performantes avec Node.js et Express.",
+      "playful": "JavaScript partout, même côté serveur. La vie est belle !"
+    },
+    {
+      "name": "CSS/Tailwind",
+      "category": "Frontend",
+      "level": 85,
+      "serious": "Création d'interfaces responsives et accessibles avec CSS moderne et Tailwind.",
+      "playful": "Faire du beau, pixel par pixel. C'est mon terrain de jeu favori."
+    },
+    {
+      "name": "Git",
+      "category": "Outils",
+      "level": 80,
+      "serious": "Gestion de versions et collaboration efficace avec Git et GitHub.",
+      "playful": "Commit, push, pull... le rythme de ma vie de dev."
+    },
+    {
+      "name": "SQL",
+      "category": "Backend",
+      "level": 65,
+      "serious": "Conception et interrogation de bases de données relationnelles.",
+      "playful": "SELECT * FROM skills WHERE awesome = true;"
+    }
+  ],
+  "projects": [
+    {
+      "id": 1,
+      "title": "E-Commerce Dashboard",
+      "context": "Projet personnel de dashboard pour gérer une boutique en ligne",
+      "objective": "Créer une interface intuitive pour suivre les ventes et le stock",
+      "role": "Développeur Full-Stack",
+      "technologies": ["React", "Node.js", "PostgreSQL", "Tailwind CSS"],
+      "serious": "Conception et développement complet d'un tableau de bord e-commerce permettant le suivi des KPIs, la gestion des stocks et l'analyse des ventes en temps réel.",
+      "playful": "Mon premier vrai bébé ! Un dashboard qui transforme des données brutes en insights visuels. J'ai appris énormément en le construisant.",
+      "learnings": ["Architecture full-stack", "Gestion d'état complexe", "Visualisation de données"]
+    },
+    {
+      "id": 2,
+      "title": "Task Manager App",
+      "context": "Application de gestion de tâches pour équipes",
+      "objective": "Faciliter la collaboration et le suivi des projets",
+      "role": "Développeur Frontend",
+      "technologies": ["React", "TypeScript", "Firebase", "Material UI"],
+      "serious": "Développement d'une application collaborative de gestion de tâches avec authentification, temps réel et notifications.",
+      "playful": "Parce que les post-its, c'est bien, mais une app qui pense avec toi, c'est mieux !",
+      "learnings": ["Firebase Realtime", "Collaboration temps réel", "UX collaborative"]
+    },
+    {
+      "id": 3,
+      "title": "Portfolio IA",
+      "context": "Ce site que vous consultez actuellement",
+      "objective": "Démontrer une approche innovante de présentation professionnelle",
+      "role": "Concepteur & Développeur",
+      "technologies": ["React", "TypeScript", "Tailwind CSS", "IA"],
+      "serious": "Conception d'un portfolio interactif intégrant un assistant IA à double personnalité pour une expérience utilisateur personnalisée.",
+      "playful": "Vous êtes en train de vivre le projet ! Un portfolio qui parle, qui s'adapte, qui a de la personnalité.",
+      "learnings": ["UX conversationnelle", "Personnalisation IA", "Design adaptatif"]
+    }
+  ],
+  "responses": {
+    "greeting": {
+      "serious": "Bonjour, je suis l'assistant IA de Walid. Comment puis-je vous aider à découvrir son profil professionnel ?",
+      "playful": "Hey ! 👋 Je suis l'alter ego digital de Walid. Posez-moi n'importe quelle question, promis je ne mords pas !"
+    },
+    "unknown": {
+      "serious": "Je n'ai pas d'information spécifique sur ce sujet. Je vous invite à explorer les autres sections du portfolio ou à contacter Walid directement.",
+      "playful": "Hmm, bonne question ! Je n'ai pas la réponse en tête, mais Walid serait ravi d'en discuter avec vous directement. Il adore les questions qui le font réfléchir !"
+    }
+  }
+}

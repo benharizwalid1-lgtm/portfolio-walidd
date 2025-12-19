@@ -6,12 +6,14 @@ import ChatMessage from '@/components/ChatMessage';
 import AIInput from '@/components/AIInput';
 import { getAIResponse, getSuggestedQuestions } from '@/lib/ai-responses';
 import { Personality } from '@/contexts/PersonalityContext';
+import type { AgentName } from '@/lib/agents';
 
 interface Message {
   id: string;
   role: 'user' | 'assistant';
   content: string;
   personalityUsed?: Personality;
+  agentName?: AgentName;
 }
 
 const Assistant = () => {
@@ -50,13 +52,14 @@ const Assistant = () => {
     // Simulate AI thinking time
     await new Promise(resolve => setTimeout(resolve, 800 + Math.random() * 700));
 
-    const response = getAIResponse(question, personality);
+    const result = getAIResponse(question, personality);
     
     const aiMessage: Message = {
       id: (Date.now() + 1).toString(),
       role: 'assistant',
-      content: response,
+      content: result.content,
       personalityUsed: personality,
+      agentName: result.agent,
     };
 
     setMessages(prev => [...prev, aiMessage]);

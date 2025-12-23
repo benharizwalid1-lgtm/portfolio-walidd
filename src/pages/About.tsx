@@ -144,7 +144,7 @@ const About = () => {
             </Link>
             <span className="text-muted-foreground text-sm">ou</span>
             <a
-              href="/Walid_Ben_Hariz___Étudiant_en_Informatique_de_Gestion___Business_Intelligence.pdf"
+              href="Walid_Ben_Hariz___Étudiant_en_Informatique_de_Gestion___Business_Intelligence (3).pdf"
               download
               className="flex items-center gap-2 px-5 py-2.5 rounded-xl font-medium bg-secondary text-foreground hover:bg-secondary/80 transition-colors"
             >

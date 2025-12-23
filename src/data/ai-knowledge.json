@@ -1,0 +1,136 @@
+{
+    "languages": [
+        "fr",
+        "en",
+        "tn",
+        "de",
+        "it",
+        "es"
+    ],
+    "translations": {
+        "greeting": {
+            "fr": {
+                "serious": "Bonjour. Je suis l'assistant virtuel de Elwalid Ben Hariz. Je peux répondre à vos questions sur son parcours, ses compétences et ses projets.",
+                "playful": "Salut ! 👋 Je suis l'IA de Elwalid. Pose-moi n'importe quelle question sur lui, je suis là pour ça !"
+            },
+            "en": {
+                "serious": "Hello. I am Elwalid Ben Hariz's virtual assistant. I can answer your questions about his background, skills, and projects.",
+                "playful": "Hi! 👋 I'm Elwalid's AI. Ask me anything about him, I'm here to help!"
+            },
+            "tn": {
+                "serious": "3aslema. Ena l'assistant mta3 Elwalid Ben Hariz. Najjem njaweb 3la as2eltek lkoll 3la parcours mte3ou w chnowa ya3ref ya3mel.",
+                "playful": "3aslema! 👋 Ena l'IA mta3 Elwalid. Es2elni ay haja 3lih, hani houni!"
+            },
+            "de": {
+                "serious": "Guten Tag. Ich bin Elwalid Ben Hariz' virtueller Assistent. Ich kann Ihre Fragen zu seinem Werdegang, seinen Fähigkeiten und Projekten beantworten.",
+                "playful": "Hallo! 👋 Ich bin Elwalids KI. Frag mich alles über ihn!"
+            },
+            "it": {
+                "serious": "Buongiorno. Sono l'assistente virtuale di Elwalid Ben Hariz. Posso rispondere alle tue domande sul suo percorso, le sue competenze e i suoi progetti.",
+                "playful": "Ciao! 👋 Sono l'IA di Elwalid. Chiedimi qualsiasi cosa su di lui!"
+            },
+            "es": {
+                "serious": "Hola. Soy el asistente virtual de Elwalid Ben Hariz. Puedo responder a tus preguntas sobre su trayectoria, habilidades y proyectos.",
+                "playful": "¡Hola! 👋 Soy la IA de Elwalid. Pregúntame lo que quieras sobre él."
+            }
+        },
+        "bio": {
+            "fr": "Elwalid Ben Hariz est un étudiant en Business Intelligence passionné par les systèmes d'information et le développement web. Il combine rigueur analytique et curiosité technique.",
+            "en": "Elwalid Ben Hariz is a Business Intelligence student passionate about information systems and web development. He combines analytical rigor with technical curiosity.",
+            "tn": "Elwalid Ben Hariz etudiant fi Business Intelligence, maghroum b les systèmes d'information w développement web. Yheb dima yetaalem hajet jdod w yotkene khedmtou.",
+            "de": "Elwalid Ben Hariz ist ein Business Intelligence Student mit Leidenschaft für Informationssysteme und Webentwicklung.",
+            "it": "Elwalid Ben Hariz è uno studente di Business Intelligence appassionato di sistemi informativi e sviluppo web.",
+            "es": "Elwalid Ben Hariz es un estudiante de Business Intelligence apasionado por los sistemas de información y el desarrollo web."
+        },
+        "projects": {
+            "fr": "Elwalid a travaillé sur plusieurs projets marquants, notamment 'MYAPP' (une application de gestion de caisses en React Native) et ce Portfolio personnel. Il aime créer des solutions concrètes.",
+            "en": "Elwalid has worked on several significant projects, notably 'MYAPP' (a cash management app in React Native) and this personal Portfolio. He loves creating concrete solutions.",
+            "tn": "Elwalid khdem 3la barcha projets kima 'MYAPP' (application gestion de caisses b React Native) w Portfolio hedha. Yheb ya3mel hajet taslah w m منظمaa.",
+            "de": "Elwalid hat an mehreren wichtigen Projekten gearbeitet, insbesondere 'MYAPP' und diesem Portfolio.",
+            "it": "Elwalid ha lavorato a diversi progetti importanti, in particolare 'MYAPP' e questo Portfolio personale.",
+            "es": "Elwalid ha trabajado en varios proyectos importantes, notablemente 'MYAPP' y este Portfolio personal."
+        },
+        "skills": {
+            "fr": "Côté technique, Elwalid maîtrise HTML, CSS, JavaScript et React pour le frontend. Il a aussi des compétences en SQL, Node.js et utilise Git pour le versioning.",
+            "en": "Technically, Elwalid masters HTML, CSS, JavaScript, and React for frontend. He also has skills in SQL, Node.js and uses Git for versioning.",
+            "tn": "Fel technique, Elwalid ya3ref mlih HTML, CSS, JavaScript w React. W zeda 3andou fekra behia 3la SQL, Node.js w yesta3mel Git.",
+            "de": "Technisch beherrscht Elwalid HTML, CSS, JavaScript und React. Er hat auch Kenntnisse in SQL und Node.js.",
+            "it": "Tecnicamente, Elwalid padroneggia HTML, CSS, JavaScript e React. Ha anche competenze in SQL e Node.js.",
+            "es": "Técnicamente, Elwalid domina HTML, CSS, JavaScript y React. También tiene conocimientos de SQL y Node.js."
+        },
+        "values": {
+            "fr": "Je suis curieux, adaptable et rigoureux. Je m'investis à 100% pour transformer des problèmes complexes en solutions simples et élégantes.",
+            "en": "I am curious, adaptable, and rigorous. I give 100% to transform complex problems into simple, elegant solutions.",
+            "tn": "Ena insan curieux, netaalem fisa3 w mandom. Na3ti l'max bech nhol machekel s3iba b tari9a sehla w mezyena.",
+            "de": "Ich bin neugierig, anpassungsfähig und gründlich. Ich gebe 100%, um komplexe Probleme in einfache Lösungen zu verwandeln.",
+            "it": "Sono curioso, adattabile e rigoroso. Mi impegno al 100% per trasformare problemi complessi in soluzioni semplici ed eleganti.",
+            "es": "Soy curioso, adaptable y riguroso. Doy el 100% para transformar problemas complejos en soluciones simples y elegantes."
+        },
+        "contact": {
+            "fr": "Vous pouvez contacter Elwalid par email (benharizwalid1@gmail.com) ou via LinkedIn. Il est toujours ouvert aux nouvelles opportunités.",
+            "en": "You can contact Elwalid via email (benharizwalid1@gmail.com) or LinkedIn. He is always open to new opportunities.",
+            "tn": "Tnajjem takhlet 3la Elwalid bel email (benharizwalid1@gmail.com) wala LinkedIn. Dima yjaweb w yheb yisma3 propositions jdod.",
+            "de": "Sie können Elwalid per E-Mail oder LinkedIn kontaktieren.",
+            "it": "Puoi contattare Elwalid via email o LinkedIn.",
+            "es": "Puedes contactar a Elwalid por correo electrónico o LinkedIn."
+        },
+        "unknown": {
+            "fr": {
+                "serious": "Je n'ai pas la réponse à cette question. Veuillez préciser ou contacter Elwalid directement.",
+                "playful": "Oula, bonne question ! 😅 Je ne sais pas trop. Essaye de demander autre chose sur ses projets ou compétences ?"
+            },
+            "en": {
+                "serious": "I do not have the answer to this question. Please clarify or contact Elwalid directly.",
+                "playful": "Good question! 😅 I'm not sure. Maybe ask something about his projects or skills?"
+            },
+            "tn": {
+                "serious": "Ma 3andich fekra 3la hkeya hedhi. Tnajjem tes2el Elwalid direct.",
+                "playful": "Sou2el behi ! 😅 Ama ma na3rafch. Jarreb es2el 3la les projets wala skills mte3ou ?"
+            },
+            "de": {
+                "serious": "Ich habe keine Antwort auf diese Frage.",
+                "playful": "Gute Frage! 😅 Aber ich weiß es nicht."
+            },
+            "it": {
+                "serious": "Non ho la risposta a questa domanda.",
+                "playful": "Bella domanda! 😅 Ma non lo so."
+            },
+            "es": {
+                "serious": "No tengo la respuesta a esta pregunta.",
+                "playful": "¡Buena pregunta! 😅 Pero no lo sé."
+            }
+        },
+        "suggestions": {
+            "fr": [
+                "Qui est Elwalid ?",
+                "Ses compétences ?",
+                "Ses projets ?"
+            ],
+            "en": [
+                "Who is Elwalid?",
+                "His skills?",
+                "His projects?"
+            ],
+            "tn": [
+                "Chnowa ya3mel Elwalid?",
+                "Chnowa ymayzou?",
+                "Khedmou?"
+            ],
+            "de": [
+                "Wer ist Elwalid?",
+                "Seine Fähigkeiten?",
+                "Seine Projekte?"
+            ],
+            "it": [
+                "Chi è Elwalid?",
+                "Le sue competenze?",
+                "I suoi progetti?"
+            ],
+            "es": [
+                "¿Quién es Elwalid?",
+                "¿Sus habilidades?",
+                "¿Sus proyectos?"
+            ]
+        }
+    }
+}

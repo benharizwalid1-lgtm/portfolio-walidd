@@ -29,7 +29,7 @@ const Navbar = () => {
               ${personality === 'serious' ? 'text-gradient-serious' : 'text-gradient-playful'}
             `}
           >
-            Walid.dev
+            Ben.Hariz.Elwalid
           </Link>
 
           {/* Desktop Nav */}

@@ -82,7 +82,18 @@ const Assistant = () => {
         {/* Chat Messages */}
         <div className="space-y-6 mb-8 min-h-[300px]">
           {messages.length === 0 ? (
-            <div className="text-center py-12">
+            <div className="text-center py-12 space-y-6">
+              {/* Input Bar - Placed before suggested questions */}
+              <div className="mb-8">
+                <AIInput 
+                  onSubmit={handleQuestion} 
+                  showPersonalityToggle={false}
+                  placeholder={personality === 'serious' 
+                    ? "Posez votre question..." 
+                    : "Qu'est-ce que vous voulez savoir ?"}
+                />
+              </div>
+
               <p className="text-muted-foreground mb-6">
                 {personality === 'serious' 
                   ? "Commencez par poser une question sur le profil de Walid."
@@ -133,7 +144,8 @@ const Assistant = () => {
           <div ref={messagesEndRef} />
         </div>
 
-        {/* Input Fixed at Bottom */}
+        {/* Input Fixed at Bottom - Only shown when there are messages */}
+        {messages.length > 0 && (
         <div className="fixed bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-background via-background to-transparent">
           <div className="container mx-auto max-w-3xl">
             <AIInput 
@@ -145,6 +157,7 @@ const Assistant = () => {
             />
           </div>
         </div>
+        )}
       </div>
     </main>
   );

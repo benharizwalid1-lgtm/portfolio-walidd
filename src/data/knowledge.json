@@ -1,120 +1,133 @@
 {
   "profile": {
-    "name": "Walid",
-    "title": "Développeur Web Junior",
-    "location": "France",
-    "email": "walid@example.com",
-    "linkedin": "https://linkedin.com/in/walid",
-    "github": "https://github.com/walid"
+    "name": "Elwalid Ben Hariz",
+    "title": "Étudiant en LBC / Business Intelligence",
+    "location": "Tunisie",
+    "email": "benharizwalid1@gmail.com",
+    "linkedin": "https://www.linkedin.com/in/elwalid-ben-hariz-83457b396/",
+    "github": "https://github.com/benharizwalid1-lgtm"
   },
   "bio": {
-    "serious": "Développeur web junior passionné par la création de solutions digitales performantes et évolutives. Rigoureux, méthodique et orienté résultats, je m'engage à livrer un code de qualité qui répond aux besoins métier.",
-    "playful": "Je suis ce genre de développeur qui transforme le café en lignes de code et les problèmes complexes en solutions élégantes. J'aime casser les choses pour mieux les reconstruire, et je crois que chaque bug est une opportunité déguisée."
+    "serious": "Étudiant en LBC / Business Intelligence et informatique de gestion, intéressé par les systèmes d’information, l’analyse des données et le développement web. Sérieux, motivé et curieux, je développe progressivement mes compétences techniques à travers des projets académiques et personnels.",
+    "playful": "Étudiant le jour, curieux du numérique la nuit. J’aime comprendre comment les systèmes fonctionnent, analyser les données et transformer les idées en solutions concrètes (avec ou sans café ☕)."
   },
   "values": [
     {
       "name": "Curiosité",
-      "serious": "Une veille technologique constante pour rester à la pointe des innovations.",
-      "playful": "Je suis ce développeur qui lit la documentation... pour le plaisir."
+      "serious": "Volonté constante d’apprendre et de découvrir de nouveaux outils liés aux systèmes d’information et à la Business Intelligence.",
+      "playful": "Je suis ce genre d’étudiant qui explore la documentation par curiosité."
     },
     {
       "name": "Adaptabilité",
-      "serious": "Capacité à m'intégrer rapidement dans différents environnements et technologies.",
-      "playful": "Nouveau framework ? Nouveau défi ? Je suis partant !"
+      "serious": "Capacité à m’adapter à de nouveaux environnements, outils et méthodes de travail.",
+      "playful": "Nouvelle technologie ? Nouveau défi ? J’aime apprendre."
     },
     {
-      "name": "Qualité",
-      "serious": "Un engagement envers l'excellence technique et les bonnes pratiques.",
-      "playful": "Le code propre, c'est comme ranger sa chambre : on se sent mieux après."
+      "name": "Rigueur",
+      "serious": "Approche structurée dans le travail académique et les projets pratiques.",
+      "playful": "Un esprit organisé, même quand le code ne l’est pas encore."
     }
   ],
   "skills": [
     {
-      "name": "React",
-      "category": "Frontend",
-      "level": 80,
-      "serious": "Maîtrise du framework React pour le développement d'interfaces utilisateur modernes et réactives.",
-      "playful": "React et moi, c'est une belle histoire d'amour. Hooks, Context, tout le package !"
+      "name": "HTML / CSS",
+      "category": "Web",
+      "level": 70,
+      "serious": "Connaissances solides en HTML et CSS pour la création d'interfaces web simples et responsives.",
+      "playful": "Faire du propre et du lisible, c'est déjà un bon début.",
+      "image": "/skills/htmlcss.webp"
     },
     {
-      "name": "TypeScript",
+      "name": "JavaScript",
+      "category": "Web",
+      "level": 60,
+      "serious": "Bases en JavaScript pour ajouter de l'interactivité aux applications web.",
+      "playful": "Encore en apprentissage, mais chaque script est un pas en avant.",
+      "image": "/skills/js.webp"
+    },
+    {
+      "name": "React",
       "category": "Frontend",
-      "level": 75,
-      "serious": "Utilisation de TypeScript pour un code robuste et maintenable.",
-      "playful": "Parce que les erreurs à la compilation, c'est toujours mieux qu'en production."
+      "level": 55,
+      "serious": "Notions de base en React acquises à travers des projets personnels et d'apprentissage.",
+      "playful": "Les composants, ça commence à devenir plus clair.",
+      "image": "/skills/react.webp"
+    },
+    {
+      "name": "Tailwind",
+      "category": "Frontend",
+      "level": 55,
+      "serious": "Maîtrise des classes utilitaires de base de Tailwind CSS pour créer des interfaces modernes, responsives et bien structurées.",
+      "playful": "Plus besoin d’écrire du CSS à la main, les classes Tailwind font le travail ",
+      "image": "/skills/tailwind.webp"
     },
     {
       "name": "Node.js",
       "category": "Backend",
-      "level": 70,
-      "serious": "Développement d'APIs RESTful performantes avec Node.js et Express.",
-      "playful": "JavaScript partout, même côté serveur. La vie est belle !"
-    },
-    {
-      "name": "CSS/Tailwind",
-      "category": "Frontend",
-      "level": 85,
-      "serious": "Création d'interfaces responsives et accessibles avec CSS moderne et Tailwind.",
-      "playful": "Faire du beau, pixel par pixel. C'est mon terrain de jeu favori."
-    },
-    {
-      "name": "Git",
-      "category": "Outils",
-      "level": 80,
-      "serious": "Gestion de versions et collaboration efficace avec Git et GitHub.",
-      "playful": "Commit, push, pull... le rythme de ma vie de dev."
+      "level": 50,
+      "serious": "Bases en Node.js pour le développement côté serveur et la création d'APIs.",
+      "playful": "JavaScript partout, même côté serveur.",
+      "image": "/skills/node.webp"
     },
     {
       "name": "SQL",
-      "category": "Backend",
+      "category": "Base de données",
       "level": 65,
-      "serious": "Conception et interrogation de bases de données relationnelles.",
-      "playful": "SELECT * FROM skills WHERE awesome = true;"
+      "serious": "Requêtes SQL fondamentales pour l'exploitation de bases de données relationnelles.",
+      "playful": "SELECT, JOIN… et un peu de logique.",
+      "image": "/skills/mysql.webp"
+    },
+    {
+      "name": "Git / GitHub",
+      "category": "Outils",
+      "level": 60,
+      "serious": "Utilisation de Git pour la gestion de versions dans un cadre académique.",
+      "playful": "Commit, push… et parfois corriger.",
+      "image": "/skills/github.webp"
     }
   ],
   "projects": [
     {
       "id": 1,
-      "title": "E-Commerce Dashboard",
-      "context": "Projet personnel de dashboard pour gérer une boutique en ligne",
-      "objective": "Créer une interface intuitive pour suivre les ventes et le stock",
-      "role": "Développeur Full-Stack",
-      "technologies": ["React", "Node.js", "PostgreSQL", "Tailwind CSS"],
-      "serious": "Conception et développement complet d'un tableau de bord e-commerce permettant le suivi des KPIs, la gestion des stocks et l'analyse des ventes en temps réel.",
-      "playful": "Mon premier vrai bébé ! Un dashboard qui transforme des données brutes en insights visuels. J'ai appris énormément en le construisant.",
-      "learnings": ["Architecture full-stack", "Gestion d'état complexe", "Visualisation de données"]
+      "title": "MYAPP – Application de gestion de caisses",
+      "context": "Projet académique / personnel",
+      "objective": "Analyser et comparer les méthodes de gestion de caisses utilisées par les commerçants afin de faciliter la prise de décision et la digitalisation des processus.",
+      "role": "Étudiant – Conception, développement et analyse des données",
+      "technologies": [
+        "react native",
+        "expo",
+        "firebase",
+        "tailwind"
+      ],
+      "serious": "MYAPP centralise et structure les données liées aux pratiques de gestion de caisses, permettant d’évaluer l’efficacité des différentes méthodes et de mettre en évidence les limites des solutions traditionnelles par rapport aux outils numériques.",
+      "playful": "Un projet interactif qui m’a permis de transformer l’analyse théorique des pratiques commerciales en une application concrète et utile pour les étudiants, chercheurs et professionnels.",
+      "app_link": "https://expo.dev/accounts/walidbenhariz/projects/myApp/builds/13128b02-7af2-4ba1-93e6-304d82184d2b"
     },
     {
       "id": 2,
-      "title": "Task Manager App",
-      "context": "Application de gestion de tâches pour équipes",
-      "objective": "Faciliter la collaboration et le suivi des projets",
-      "role": "Développeur Frontend",
-      "technologies": ["React", "TypeScript", "Firebase", "Material UI"],
-      "serious": "Développement d'une application collaborative de gestion de tâches avec authentification, temps réel et notifications.",
-      "playful": "Parce que les post-its, c'est bien, mais une app qui pense avec toi, c'est mieux !",
-      "learnings": ["Firebase Realtime", "Collaboration temps réel", "UX collaborative"]
-    },
-    {
-      "id": 3,
-      "title": "Portfolio IA",
-      "context": "Ce site que vous consultez actuellement",
-      "objective": "Démontrer une approche innovante de présentation professionnelle",
-      "role": "Concepteur & Développeur",
-      "technologies": ["React", "TypeScript", "Tailwind CSS", "IA"],
-      "serious": "Conception d'un portfolio interactif intégrant un assistant IA à double personnalité pour une expérience utilisateur personnalisée.",
-      "playful": "Vous êtes en train de vivre le projet ! Un portfolio qui parle, qui s'adapte, qui a de la personnalité.",
-      "learnings": ["UX conversationnelle", "Personnalisation IA", "Design adaptatif"]
+      "title": "Portfolio personnel",
+      "context": "Projet personnel",
+      "objective": "Présenter mon profil académique et mes compétences",
+      "role": "Étudiant – Conception",
+      "technologies": [
+        "react",
+        "tailwind",
+        "vite",
+        "typescript"
+      ],
+      "serious": "Portfolio réalisé pour présenter mon parcours, mes compétences et mes projets.",
+      "playful": "Mon espace personnel sur le web.",
+      "portfolio_link": "#"
     }
   ],
   "responses": {
     "greeting": {
-      "serious": "Bonjour, je suis l'assistant IA de Walid. Comment puis-je vous aider à découvrir son profil professionnel ?",
-      "playful": "Hey ! 👋 Je suis l'alter ego digital de Walid. Posez-moi n'importe quelle question, promis je ne mords pas !"
+      "serious": "Bonjour, je suis l’assistant IA du portfolio de Walid. Comment puis-je vous aider à découvrir son profil académique ?",
+      "playful": "Salut 👋 Je suis l’assistant du portfolio de Walid. Curieux d’en savoir plus ?"
     },
     "unknown": {
-      "serious": "Je n'ai pas d'information spécifique sur ce sujet. Je vous invite à explorer les autres sections du portfolio ou à contacter Walid directement.",
-      "playful": "Hmm, bonne question ! Je n'ai pas la réponse en tête, mais Walid serait ravi d'en discuter avec vous directement. Il adore les questions qui le font réfléchir !"
+      "serious": "Je n’ai pas d’information précise sur ce sujet. N’hésitez pas à contacter Walid directement.",
+      "playful": "Bonne question ! Walid sera ravi d’en discuter avec vous."
     }
   }
 }

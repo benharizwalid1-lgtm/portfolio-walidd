@@ -5,22 +5,22 @@ export const getAIResponse = (question: string, personality: Personality): Agent
   return routeToAgent(question, personality);
 };
 
+import aiKnowledge from '@/data/ai-knowledge.json';
+
 export const getSuggestedQuestions = (personality: Personality): string[] => {
-  if (personality === 'serious') {
-    return [
-      'Qui est Walid ?',
-      'Quels projets a-t-il réalisés ?',
-      'Quelles sont ses compétences techniques ?',
-      'Pourquoi serait-il un bon choix pour une équipe ?',
-      "Quelle est sa méthode de travail ?"
-    ];
-  } else {
-    return [
-      "Hey, c'est qui Walid ?",
-      'Raconte-moi ses projets !',
-      'Quels sont ses super-pouvoirs ?',
-      'Pourquoi je devrais bosser avec lui ?',
-      'Comment il travaille au quotidien ?'
-    ];
-  }
+  // Return a mix of questions from different languages to show off capabilities
+  const suggestions = aiKnowledge.translations.suggestions;
+  const languages = ['fr', 'en', 'tn', 'de', 'it', 'es'];
+
+  // Pick one from each language (or random ones)
+  const mixedQuestions = [
+    suggestions.fr[0], // French
+    suggestions.tn[0], // Tunisian
+    suggestions.en[0], // English
+    suggestions.de[0], // German
+    suggestions.es[0], // Spanish
+  ];
+
+  // Shuffle array using Fisher-Yates (simple version)
+  return mixedQuestions.sort(() => Math.random() - 0.5);
 };

@@ -34,9 +34,9 @@ const About = () => {
   return (
     <main className="min-h-screen pt-24 pb-12 px-4">
       <div className="container mx-auto max-w-4xl">
-        <PageHeader 
-          title="À propos" 
-          subtitle={personality === 'serious' 
+        <PageHeader
+          title="À propos"
+          subtitle={personality === 'serious'
             ? "Parcours, vision et valeurs professionnelles"
             : "Qui se cache derrière ces lignes de code ?"
           }
@@ -46,10 +46,16 @@ const About = () => {
         <section className="glass rounded-2xl p-8 mb-8 animate-fade-in">
           <div className="flex flex-col md:flex-row gap-8 items-center">
             <div className={`
-              w-32 h-32 rounded-2xl flex items-center justify-center text-6xl
+              w-32 h-38 rounded-2xl flex items-center justify-center text-6xl
               ${personality === 'serious' ? 'bg-serious/10' : 'bg-playful/10'}
             `}>
-              👨‍💻
+              <img
+                src="/walid.webp"
+                alt="pdp"
+                loading='lazy'
+                className='rounded-2xl'
+              />
+
             </div>
             <div className="flex-1 text-center md:text-left">
               <h2 className="text-2xl font-bold mb-2">{knowledge.profile.name}</h2>
@@ -69,7 +75,7 @@ const About = () => {
         {/* Highlights */}
         <section className="grid md:grid-cols-3 gap-4 mb-8">
           {highlights.map((item, index) => (
-            <div 
+            <div
               key={item.title}
               className={`
                 glass p-6 rounded-2xl text-center animate-slide-up
@@ -98,7 +104,7 @@ const About = () => {
           </h2>
           <div className="space-y-4">
             {knowledge.values.map((value, index) => (
-              <div 
+              <div
                 key={value.name}
                 className="glass p-6 rounded-2xl animate-slide-up"
                 style={{ animationDelay: `${0.3 + index * 0.1}s` }}
@@ -137,10 +143,14 @@ const About = () => {
               Demander à l'IA
             </Link>
             <span className="text-muted-foreground text-sm">ou</span>
-            <button className="flex items-center gap-2 px-5 py-2.5 rounded-xl font-medium bg-secondary text-foreground hover:bg-secondary/80 transition-colors">
+            <a
+              href="/Walid_Ben_Hariz___Étudiant_en_Informatique_de_Gestion___Business_Intelligence.pdf"
+              download
+              className="flex items-center gap-2 px-5 py-2.5 rounded-xl font-medium bg-secondary text-foreground hover:bg-secondary/80 transition-colors"
+            >
               <Download className="w-4 h-4" />
               Télécharger CV
-            </button>
+            </a>
           </div>
         </section>
       </div>

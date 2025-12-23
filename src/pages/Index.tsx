@@ -1,3 +1,4 @@
+import { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { usePersonality } from '@/contexts/PersonalityContext';
 import AIInput from '@/components/AIInput';
@@ -5,13 +6,78 @@ import { ArrowRight, Bot, Briefcase, Code, User } from 'lucide-react';
 
 const Index = () => {
   const { personality } = usePersonality();
+  const [displayedText1, setDisplayedText1] = useState('');
+  const [displayedText2, setDisplayedText2] = useState('');
+  const [isAnimating, setIsAnimating] = useState(true);
+  const animationKey = useRef(0);
+
+  const seriousText1 = "Étudiant en LBC";
+  const seriousText2 = "Business Intelligence";
+  const playfulText1 = "Hello, moi c'est";
+  const playfulText2 = "Elwalid Ben Hariz";
+
+  useEffect(() => {
+    // Reset animation when personality changes
+    setIsAnimating(true);
+    setDisplayedText1('');
+    setDisplayedText2('');
+    animationKey.current += 1;
+
+    const text1 = personality === 'serious' ? seriousText1 : playfulText1;
+    const text2 = personality === 'serious' ? seriousText2 : playfulText2;
+
+    let index1 = 0;
+    let index2 = 0;
+    let timer1: NodeJS.Timeout | null = null;
+    let timer2: NodeJS.Timeout | null = null;
+    const currentKey = animationKey.current;
+
+    // Animate first line with typewriter effect
+    timer1 = setInterval(() => {
+      if (currentKey !== animationKey.current) {
+        if (timer1) clearInterval(timer1);
+        return;
+      }
+
+      if (index1 < text1.length) {
+        setDisplayedText1(text1.slice(0, index1 + 1));
+        index1++;
+      } else {
+        if (timer1) clearInterval(timer1);
+        // Start second line after a short delay
+        setTimeout(() => {
+          if (currentKey !== animationKey.current) return;
+
+          timer2 = setInterval(() => {
+            if (currentKey !== animationKey.current) {
+              if (timer2) clearInterval(timer2);
+              return;
+            }
+
+            if (index2 < text2.length) {
+              setDisplayedText2(text2.slice(0, index2 + 1));
+              index2++;
+            } else {
+              if (timer2) clearInterval(timer2);
+              setIsAnimating(false);
+            }
+          }, 70);
+        }, 400);
+      }
+    }, 70);
+
+    return () => {
+      if (timer1) clearInterval(timer1);
+      if (timer2) clearInterval(timer2);
+    };
+  }, [personality]);
 
   const features = [
     {
       icon: Bot,
       title: 'Assistant IA',
-      description: personality === 'serious' 
-        ? 'Découvrez mon profil via un assistant intelligent' 
+      description: personality === 'serious'
+        ? 'Découvrez mon profil via un assistant intelligent'
         : 'Posez vos questions, je réponds !',
       link: '/assistant'
     },
@@ -48,35 +114,56 @@ const Index = () => {
         <div className="text-center space-y-6 animate-fade-in">
           <div className={`
             inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium
-            ${personality === 'serious' 
-              ? 'bg-serious/10 text-serious border border-serious/20' 
+            ${personality === 'serious'
+              ? 'bg-serious/10 text-serious border border-serious/20'
               : 'bg-playful/10 text-playful border border-playful/20'
             }
           `}>
             <Bot className="w-4 h-4" />
-            {personality === 'serious' 
-              ? 'Portfolio Intelligent' 
+            {personality === 'serious'
+              ? 'Portfolio Intelligent'
               : 'Portfolio avec IA intégrée ✨'}
           </div>
 
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight">
             {personality === 'serious' ? (
               <>
-                Développeur Web
+                <span className="inline-block animate-slide-up-fade">
+                  {displayedText1}
+                  {isAnimating && displayedText1.length < seriousText1.length && (
+                    <span className="inline-block w-0.5 h-[1em] ml-1 align-middle bg-serious animate-blink" />
+                  )}
+                </span>
                 <br />
-                <span className="text-gradient-serious">Orienté Solutions</span>
+                <span className="text-gradient-serious inline-block animate-slide-up-fade" style={{ animationDelay: '0.4s' }}>
+                  {displayedText2}
+                  {isAnimating && displayedText2.length < seriousText2.length && (
+                    <span className="inline-block w-0.5 h-[1em] ml-1 align-middle bg-serious animate-blink" />
+                  )}
+                </span>
               </>
             ) : (
               <>
-                Hello, moi c'est
+                <span className="inline-block animate-slide-up-fade">
+                  {displayedText1}
+                  {isAnimating && displayedText1.length < playfulText1.length && (
+                    <span className="inline-block w-0.5 h-[1em] ml-1 align-middle bg-playful animate-blink" />
+                  )}
+                </span>
                 <br />
-                <span className="text-gradient-playful">Walid</span> 👋
+                <span className="text-gradient-playful inline-block animate-slide-up-fade" style={{ animationDelay: '0.4s' }}>
+                  {displayedText2}
+                  {isAnimating && displayedText2.length < playfulText2.length && (
+                    <span className="inline-block w-0.5 h-[1em] ml-1 align-middle bg-playful animate-blink" />
+                  )}
+                  {displayedText2.length === playfulText2.length && !isAnimating && ' 👋'}
+                </span>
               </>
             )}
           </h1>
 
           <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
-            {personality === 'serious' 
+            {personality === 'serious'
               ? "Découvrez mon profil professionnel à travers un assistant IA qui répond à vos questions avec précision et clarté."
               : "Un portfolio qui parle, qui répond, qui s'adapte à vous. Posez-moi une question et voyez ce qui se passe !"}
           </p>
@@ -131,8 +218,8 @@ const Index = () => {
               <div className="flex items-start gap-4">
                 <div className={`
                   p-3 rounded-xl transition-colors duration-300
-                  ${personality === 'serious' 
-                    ? 'bg-serious/10 text-serious group-hover:bg-serious/20' 
+                  ${personality === 'serious'
+                    ? 'bg-serious/10 text-serious group-hover:bg-serious/20'
                     : 'bg-playful/10 text-playful group-hover:bg-playful/20'
                   }
                 `}>
@@ -165,8 +252,8 @@ const Index = () => {
             text-2xl md:text-3xl font-bold mb-4
             ${personality === 'serious' ? 'text-gradient-serious' : 'text-gradient-playful'}
           `}>
-            {personality === 'serious' 
-              ? 'Prêt à collaborer ?' 
+            {personality === 'serious'
+              ? 'Prêt à collaborer ?'
               : 'Envie de discuter ?'}
           </h2>
           <p className="text-muted-foreground mb-6 max-w-lg mx-auto">

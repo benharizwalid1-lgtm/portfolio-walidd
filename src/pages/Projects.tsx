@@ -9,25 +9,30 @@ const Projects = () => {
   const { personality } = usePersonality();
   const [expandedProject, setExpandedProject] = useState<number | null>(null);
 
+  // Only display the 2 projects from knowledge.json (id: 1 and id: 2)
+  const projects = knowledge.projects.filter((project) =>
+    project.id === 1 || project.id === 2
+  );
+
   return (
     <main className="min-h-screen pt-24 pb-12 px-4">
       <div className="container mx-auto max-w-4xl">
-        <PageHeader 
-          title="Projets" 
-          subtitle={personality === 'serious' 
+        <PageHeader
+          title="Projets"
+          subtitle={personality === 'serious'
             ? "Réalisations techniques et professionnelles"
             : "Mes créations, mes aventures numériques"
           }
         />
 
         <div className="space-y-6">
-          {knowledge.projects.map((project, index) => (
-            <div 
+          {projects.map((project, index) => (
+            <div
               key={project.id}
               className={`
                 glass rounded-2xl overflow-hidden animate-slide-up
                 transition-all duration-500
-                ${expandedProject === project.id 
+                ${expandedProject === project.id
                   ? personality === 'serious' ? 'glow-serious' : 'glow-playful'
                   : ''
                 }
@@ -35,7 +40,7 @@ const Projects = () => {
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               {/* Header */}
-              <div 
+              <div
                 className="p-6 cursor-pointer"
                 onClick={() => setExpandedProject(
                   expandedProject === project.id ? null : project.id
@@ -65,12 +70,12 @@ const Projects = () => {
                 {/* Technologies */}
                 <div className="flex flex-wrap gap-2 mt-4">
                   {project.technologies.map((tech) => (
-                    <span 
+                    <span
                       key={tech}
                       className={`
                         px-3 py-1 text-xs rounded-full
-                        ${personality === 'serious' 
-                          ? 'bg-serious/10 text-serious' 
+                        ${personality === 'serious'
+                          ? 'bg-serious/10 text-serious'
                           : 'bg-playful/10 text-playful'
                         }
                       `}
@@ -103,22 +108,6 @@ const Projects = () => {
                       </h4>
                       <p className="text-foreground">{project.role}</p>
                     </div>
-                    <div>
-                      <h4 className="font-semibold mb-2 text-sm text-muted-foreground uppercase tracking-wider">
-                        Apprentissages
-                      </h4>
-                      <ul className="space-y-1">
-                        {project.learnings.map((learning) => (
-                          <li key={learning} className="text-foreground flex items-center gap-2">
-                            <span className={`
-                              w-1.5 h-1.5 rounded-full
-                              ${personality === 'serious' ? 'bg-serious' : 'bg-playful'}
-                            `} />
-                            {learning}
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
                   </div>
 
                   <div className="flex flex-wrap gap-3">
@@ -135,10 +124,16 @@ const Projects = () => {
                       <Bot className="w-4 h-4" />
                       Demander à l'IA
                     </Link>
-                    <button className="flex items-center gap-2 px-4 py-2 rounded-xl text-sm font-medium bg-secondary text-foreground hover:bg-secondary/80 transition-colors">
+                    {/* Check for link availability in a cleaner way if possible, but inline is fine for this */}
+                    <a
+                      href={(project as any).app_link || (project as any).portfolio_link || '#'}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={`flex items-center gap-2 px-4 py-2 rounded-xl text-sm font-medium bg-secondary text-foreground hover:bg-secondary/80 transition-colors ${!((project as any).app_link || (project as any).portfolio_link) ? 'opacity-50 cursor-not-allowed pointer-events-none' : ''}`}
+                    >
                       <ExternalLink className="w-4 h-4" />
                       Voir le projet
-                    </button>
+                    </a>
                   </div>
                 </div>
               )}

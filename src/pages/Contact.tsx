@@ -19,7 +19,7 @@ const Contact = () => {
       icon: Mail,
       label: 'Email',
       value: knowledge.profile.email,
-      href: `mailto:${knowledge.profile.email}`
+      href: "#"
     },
     {
       icon: Linkedin,
@@ -27,6 +27,8 @@ const Contact = () => {
       value: 'Walid',
       href: knowledge.profile.linkedin
     },
+
+    
     {
       icon: Github,
       label: 'GitHub',
